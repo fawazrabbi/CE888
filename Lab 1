@@ -32,3 +32,47 @@ e=np.array([[2],[4],[6]])
 f=np.hstack((d,e))
 print(f)
 
+#Question 5
+a=np.array([[1],[2]])
+b=np.array([[2],[3]])
+c=np.hstack((a,b))
+print(c)
+print("Common values between two arrays:")
+print(np.intersect1d(a,b))
+
+#Question 6
+array=np.arange(1,26)
+new=np.reshape(array,(5,5))
+print("Minimum in each row:")
+min_row=np.min(new, axis=1)
+print(min_row)
+print("Minimum in each column:")
+min_col=np.min(matrix, axis=0)
+print(min_col)
+print("Maximum in each row:")
+max_row=np.max(new,axis=1)
+print(max_row)
+print("Maximum in each column:")
+max_col=np.max(new,axis=0)
+print(max_col)
+
+#Question 7
+array=np.arange(1,101)
+print("Mean:")
+print(np.mean(array))
+print("Median:")
+print(np.median(array))
+print("Standard Deviation:")
+print(np.std(array))
+
+#Question 8
+array=np.arange(0,25)
+array=np.reshape(array,(5,5),order='F')
+row_sums=array.sum(axis=1)
+new=array/row_sums[:,np.newaxis]
+print(new)
+
+#Question 9
+array=np.arange(48)
+array=np.reshape(array,(4,4,3))
+print(array)
